@@ -1,0 +1,140 @@
+server  {
+	server_name atika-vl.ru www.atika-vl.ru;
+	charset off;
+	index index.php;
+	disable_symlinks if_not_owner from=$root_path;
+	include /etc/nginx/vhosts-includes/*.conf;
+	include /etc/nginx/vhosts-resources/atika-vl.ru/*.conf;
+	access_log /var/www/httpd-logs/atika-vl.ru.access.log;
+	error_log /var/www/httpd-logs/atika-vl.ru.error.log notice;
+	ssi on;
+	set $root_path /var/www/user/data/www/fortros_site;
+	root $root_path;
+	listen 134.0.112.129:80;
+	include /etc/nginx/vhosts-resources/user/*.conf;
+	location /webstat/ {
+		charset UTF-8;
+		index index.html;
+		location ~ [^/]\.ph(p\d*|tml)$ {
+			try_files /does_not_exists @fallback;
+		}
+		location ~* ^.+\.(jpg|jpeg|gif|png|svg|js|css|mp3|ogg|mpe?g|avi|zip|gz|bz2?|rar|swf)$ {
+			try_files $uri $uri/ @fallback;
+		}
+		location /webstat/ {
+			try_files /does_not_exists @fallback;
+		}
+	}
+	location @fallback {
+		proxy_pass http://127.0.0.1:8080;
+		proxy_redirect http://127.0.0.1:8080 /;
+		proxy_set_header Host $host;
+		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+		proxy_set_header X-Forwarded-Proto $scheme;
+		proxy_set_header X-Forwarded-Port $server_port;
+	}
+}
+server {
+	server_name atika-vl.ru www.atika-vl.ru;
+	charset off;
+	index index.php;
+	disable_symlinks if_not_owner from=$root_path;
+	include /etc/nginx/vhosts-includes/*.conf;
+	include /etc/nginx/vhosts-resources/atika-vl.ru/*.conf;
+	access_log /var/www/httpd-logs/atika-vl.ru.access.log;
+	error_log /var/www/httpd-logs/atika-vl.ru.error.log notice;
+	ssi on;
+	set $root_path /var/www/user/data/www/fortros_site;
+	root $root_path;
+	include /etc/nginx/vhosts-resources/user/*.conf;
+	location /webstat/ {
+		charset UTF-8;
+		index index.html;
+		location ~ [^/]\.ph(p\d*|tml)$ {
+			try_files /does_not_exists @fallback;
+		}
+		location ~* ^.+\.(jpg|jpeg|gif|png|svg|js|css|mp3|ogg|mpe?g|avi|zip|gz|bz2?|rar|swf)$ {
+			try_files $uri $uri/ @fallback;
+		}
+		location /webstat/ {
+			try_files /does_not_exists @fallback;
+		}
+	}
+	location @fallback {
+		proxy_pass http://127.0.0.1:8080;
+		proxy_redirect http://127.0.0.1:8080 /;
+		proxy_set_header Host $host;
+		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+		proxy_set_header X-Forwarded-Proto $scheme;
+		proxy_set_header X-Forwarded-Port $server_port;
+	}
+	return 301 https://$host:443$request_uri;
+	rewrite ^/http:/atika-dv.ru/index.php$ http://atika-vl.ru/index.php permanent;
+	location / {
+		location ~ [^/]\.ph(p\d*|tml)$ {
+			try_files /does_not_exists @fallback;
+		}
+		location ~* ^.+\.(jpg|jpeg|gif|png|svg|js|css|mp3|ogg|mpe?g|avi|zip|gz|bz2?|rar|swf)$ {
+			try_files $uri $uri/ @fallback;
+		}
+		location / {
+			try_files /does_not_exists @fallback;
+		}
+	}
+	listen 134.0.112.129:80;
+}
+server {
+	server_name atika-vl.ru www.atika-vl.ru;
+	ssl_certificate "/var/www/httpd-cert/user/atika-vl.ru_le1.crt";
+	ssl_certificate_key "/var/www/httpd-cert/user/atika-vl.ru_le1.key";
+	ssl_ciphers EECDH:+AES256:-3DES:RSA+AES:!NULL:!RC4;
+	ssl_prefer_server_ciphers on;
+	ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+	add_header Strict-Transport-Security "max-age=31536000;";
+	ssl_dhparam /etc/ssl/certs/dhparam4096.pem;
+	charset off;
+	index index.php;
+	disable_symlinks if_not_owner from=$root_path;
+	include /etc/nginx/vhosts-includes/*.conf;
+	include /etc/nginx/vhosts-resources/atika-vl.ru/*.conf;
+	access_log /var/www/httpd-logs/atika-vl.ru.access.log;
+	error_log /var/www/httpd-logs/atika-vl.ru.error.log notice;
+	ssi on;
+	set $root_path /var/www/user/data/www/fortros_site;
+	root $root_path;
+	include /etc/nginx/vhosts-resources/user/*.conf;
+	location /webstat/ {
+		charset UTF-8;
+		index index.html;
+		location ~ [^/]\.ph(p\d*|tml)$ {
+			try_files /does_not_exists @fallback;
+		}
+		location ~* ^.+\.(jpg|jpeg|gif|png|svg|js|css|mp3|ogg|mpe?g|avi|zip|gz|bz2?|rar|swf)$ {
+			try_files $uri $uri/ @fallback;
+		}
+		location /webstat/ {
+			try_files /does_not_exists @fallback;
+		}
+	}
+	location @fallback {
+		proxy_pass http://127.0.0.1:8080;
+		proxy_redirect http://127.0.0.1:8080 /;
+		proxy_set_header Host $host;
+		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+		proxy_set_header X-Forwarded-Proto $scheme;
+		proxy_set_header X-Forwarded-Port $server_port;
+	}
+	rewrite ^/http:/atika-dv.ru/index.php$ http://atika-vl.ru/index.php permanent;
+	location / {
+		location ~ [^/]\.ph(p\d*|tml)$ {
+			try_files /does_not_exists @fallback;
+		}
+		location ~* ^.+\.(jpg|jpeg|gif|png|svg|js|css|mp3|ogg|mpe?g|avi|zip|gz|bz2?|rar|swf)$ {
+			try_files $uri $uri/ @fallback;
+		}
+		location / {
+			try_files /does_not_exists @fallback;
+		}
+	}
+	listen 134.0.112.129:443 ssl;
+}

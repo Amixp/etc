@@ -1,0 +1,10 @@
+[copr:copr.fedorainfracloud.org:khara:nginx-module-ndk-lua]
+name=Copr repo for nginx-module-ndk-lua owned by khara
+baseurl=https://download.copr.fedorainfracloud.org/results/khara/nginx-module-ndk-lua/epel-7-$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://download.copr.fedorainfracloud.org/results/khara/nginx-module-ndk-lua/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1

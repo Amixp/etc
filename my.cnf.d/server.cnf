@@ -1,0 +1,74 @@
+#
+# These groups are read by MariaDB server.
+# Use it for options that only the server (but not clients) should see
+#
+# See the examples of server my.cnf files in /usr/share/mysql/
+#
+
+# this is read by the standalone daemon and embedded servers
+[server]
+
+# this is only for the mysqld standalone daemon
+[mysqld]
+bind-address=0.0.0.0
+port = 3306
+user = mysql
+server_id= 10001
+max_seeks_for_key    = 1
+innodb_flush_method = O_DIRECT
+skip_name_resolve = ON
+key_buffer_size=512M
+innodb_buffer_pool_size = 4G
+#innodb_buffer_pool_instances= 1
+innodb_doublewrite = 0
+innodb_flush_log_at_trx_commit=1
+innodb_default_row_format=DYNAMIC
+###innodb_large_prefix=ON  discontiue
+innodb_log_file_size=2G
+
+binlog_format=row
+log-bin                      = mysql-bin.log
+log-bin-index                = master-log-bin.index
+relay_log                    = slave-relay.log
+relay_log_info_file          = slave-relay-log.info
+log-slave-updates            = 1
+
+binlog_expire_logs_seconds = 2592000 #30days
+connect_timeout                 = 60
+wait_timeout                    = 3600
+max_connections                 = 50
+max_connect_errors              = 1000
+
+gtid_mode=ON
+enforce-gtid-consistency=ON
+
+character_set_client-handshake = FALSE
+character_set_server = utf8mb4
+collation_server = utf8mb4_unicode_ci
+default_authentication_plugin  = mysql_native_password
+log_error_verbosity = 3
+
+sql_mode=ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION
+
+general_log             = OFF
+log_queries_not_using_indexes = 1
+general_log_file        = /var/lib/mysql/mysql_general.log
+log_error               = ON
+log_error               = /var/lib/mysql/mysql_error.log
+slow_query_log          = ON
+log_queries_not_using_indexes   = 1
+slow_query_log_file     = /var/lib/mysql/mysql_slow.log
+
+log_output=file
+long_query_time=1
+log_slow_admin_statements=ON
+log_slow_slave_statements=ON
+innodb_monitor_enable=all
+
+# Allow server to accept connections on all interfaces.
+#
+# Optional setting
+#wsrep_slave_threads=1
+#innodb_flush_log_at_trx_commit=0
+
+read_only=0
