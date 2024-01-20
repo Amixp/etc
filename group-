@@ -38,3 +38,4 @@ ntp:x:38:
 mysql:x:27:
 nginx:x:996:
 apache:x:48:
+user:x:1001:
