@@ -40,3 +40,4 @@ nginx:x:996:
 apache:x:48:
 user:x:1001:
 cgred:x:995:
+docker:x:994:

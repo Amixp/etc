@@ -39,3 +39,4 @@ mysql:!::
 nginx:!::
 apache:!::
 user:!::
+cgred:!::
