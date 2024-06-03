@@ -11,7 +11,7 @@
 # this is only for the mysqld standalone daemon
 [mysqld]
 bind-address=0.0.0.0
-port = 3306
+port = 6033
 user = mysql
 server_id= 10001
 max_seeks_for_key    = 1

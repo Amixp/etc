@@ -1,4 +1,5 @@
 [client]
+port = 6033
 default-auth=mysql_native_password
 default-character-set = utf8mb4
 
