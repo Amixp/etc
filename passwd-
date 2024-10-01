@@ -21,3 +21,4 @@ ntp:x:38:38::/etc/ntp:/sbin/nologin
 mysql:x:27:27:MySQL Server:/var/lib/mysql:/bin/false
 nginx:x:998:996:nginx user:/var/cache/nginx:/sbin/nologin
 apache:x:48:48:Apache:/usr/share/httpd:/sbin/nologin
+user:x:1001:1001::/home/user:/bin/bash

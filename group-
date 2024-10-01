@@ -40,3 +40,7 @@ nginx:x:996:
 apache:x:48:
 user:x:1001:
 cgred:x:995:
+docker:x:994:
+stapusr:x:156:
+stapsys:x:157:
+stapdev:x:158:

@@ -1,4 +1,4 @@
-root:$6$ilBjk57387ryLqqO$6jXTfquRXwvJaxEj6BtslU9vPU6bpPxFLFmBJm9fspqx6a1meiDMmvdLZ/aX7NPe3wDSU5xwcQUjAWMuNbCpd.::0:99999:7:::
+root:$6$tzkNtaF0$vaAw7Mch.iZwayewzt9HkKLw/PTjmPshdkQtatd7rR4w7.0.Y/bqoLpwRKfIrG7PbNwTGN83WFJQ5wC3TGNp21:19874:0:99999:7:::
 bin:*:17834:0:99999:7:::
 daemon:*:17834:0:99999:7:::
 adm:*:17834:0:99999:7:::
@@ -21,3 +21,4 @@ ntp:!!:19669::::::
 mysql:!!:19727::::::
 nginx:!!:19727::::::
 apache:!!:19727::::::
+user:!!:19731:0:99999:7:::

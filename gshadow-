@@ -40,3 +40,7 @@ nginx:!::
 apache:!::
 user:!::
 cgred:!::
+docker:!::
+stapusr:!::
+stapsys:!::
+stapdev:!::
