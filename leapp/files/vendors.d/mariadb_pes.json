@@ -1,0 +1,54 @@
+{
+    "legal_notice": "Copyright (c) 2023 Oracle, AlmaLinux OS Foundation",
+    "packageinfo": [
+        {
+            "action": 3,
+            "architectures": [
+                "x86_64",
+                "aarch64",
+                "ppc64le",
+		"s390x"
+            ],
+            "description": "",
+            "id": 12691,
+            "in_packageset": {
+                "package": [
+                    {
+                        "module_stream": null,
+                        "name": "percona-xtrabackup",
+                        "repository": "mariadb-tools"
+                    }
+                ],
+                "set_id": 29743
+            },
+            "initial_release": {
+                "major_version": 7,
+                "minor_version": 9,
+                "os_name": "CentOS"
+            },
+            "is_approved": true,
+            "out_packageset": {
+                "package": [
+                    {
+                        "module_stream": null,
+                        "name": "MariaDB-backup",
+                        "repository": "all-mariadb-main"
+                    }
+                ],
+                "set_id": 29744
+            },
+            "release": {
+                "major_version": 8,
+                "minor_version": 0,
+                "os_name": "AlmaLinux"
+            },
+            "version": 1
+        }
+    ],
+    "provided_data_streams": [
+        "2.0",
+        "3.0",
+        "3.1"
+    ],
+    "timestamp": "202308241055Z"
+}

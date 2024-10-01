@@ -1,0 +1,19 @@
+CentOS 7 repoid,AlmaLinux 8 repoid in custom repo file,AlmaLinux 8 repo name in PES,CentOS 7 minor versions,AlmaLinux 8 minor versions,architecture,type(rpm/srpm/debuginfo),source product type (ga/beta,htb),target product type (ga/beta/htb)
+
+# Version: 1
+# Date: 20210726
+
+# x86_64
+base,baseos,almalinux8-baseos,all,all,x86_64,rpm,ga,ga
+base,appstream,almalinux8-appstream,all,all,x86_64,rpm,ga,ga
+base,powertools,almalinux8-powertools,all,all,x86_64,rpm,ga,ga
+base,ha,almalinux8-ha,all,all,x86_64,rpm,ga,ga
+base,resilientstorage,almalinux8-resilientstorage,all,all,x86_64,rpm,ga,ga
+
+updates,baseos,almalinux8-baseos,all,all,x86_64,rpm,ga,ga
+updates,appstream,almalinux8-appstream,all,all,x86_64,rpm,ga,ga
+updates,powertools,almalinux8-powertools,all,all,x86_64,rpm,ga,ga
+updates,ha,almalinux8-ha,all,all,x86_64,rpm,ga,ga
+updates,resilientstorage,almalinux8-resilientstorage,all,all,x86_64,rpm,ga,ga
+
+extras,extras,almalinux8-extras,all,all,x86_64,rpm,ga,ga
