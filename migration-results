@@ -1,0 +1,169 @@
+{
+  "activities": [
+    {
+      "activity": "preupgrade", 
+      "activity_ended": "2024-10-01T06:27:57.917073Z", 
+      "activity_started": "2024-10-01T06:25:28.470286Z", 
+      "env": {
+        "LEAPP_COMMON_FILES": ":/etc/leapp/repos.d/system_upgrade/common/files:/etc/leapp/repos.d/system_upgrade/el7toel8/files", 
+        "LEAPP_COMMON_TOOLS": ":/etc/leapp/repos.d/system_upgrade/common/tools:/etc/leapp/repos.d/system_upgrade/el7toel8/tools", 
+        "LEAPP_CURRENT_PHASE": "Reports", 
+        "LEAPP_DEBUG": "0", 
+        "LEAPP_EXECUTION_ID": "346014ca-6443-4e88-b042-af7f1db7b1bf", 
+        "LEAPP_EXPERIMENTAL": "0", 
+        "LEAPP_HOSTNAME": "fortros-test.ra.local", 
+        "LEAPP_IPU_IN_PROGRESS": "7to8", 
+        "LEAPP_NO_RHSM": "1", 
+        "LEAPP_NO_RHSM_FACTS": "1", 
+        "LEAPP_TARGET_PRODUCT_CHANNEL": "ga", 
+        "LEAPP_UNSUPPORTED": "0", 
+        "LEAPP_UPGRADE_PATH_FLAVOUR": "default", 
+        "LEAPP_UPGRADE_PATH_TARGET_RELEASE": "8.10", 
+        "LEAPP_VERBOSE": "0"
+      }, 
+      "executed": "/bin/leapp preupgrade", 
+      "leapp_file_changes": [], 
+      "packages": [
+        {
+          "nevra": "leapp-data-almalinux-0.4-5.el7.20240827.noarch", 
+          "signature": "RSA/SHA256, \u0427\u0442 05 \u0441\u0435\u043d 2024 21:36:40, Key ID 429785e181b961a5"
+        }, 
+        {
+          "nevra": "python2-leapp-0.18.0-1.el7.noarch", 
+          "signature": "RSA/SHA256, \u0427\u0442 22 \u0430\u0432\u0433 2024 19:21:22, Key ID 429785e181b961a5"
+        }, 
+        {
+          "nevra": "leapp-upgrade-el7toel8-deps-1:0.21.0-2.el7.elevate.2.noarch", 
+          "signature": "RSA/SHA256, \u0427\u0442 29 \u0430\u0432\u0433 2024 20:05:41, Key ID 429785e181b961a5"
+        }, 
+        {
+          "nevra": "leapp-upgrade-el7toel8-1:0.21.0-2.el7.elevate.2.noarch", 
+          "signature": "RSA/SHA256, \u0427\u0442 29 \u0430\u0432\u0433 2024 20:05:41, Key ID 429785e181b961a5"
+        }, 
+        {
+          "nevra": "leapp-deps-0.18.0-1.el7.noarch", 
+          "signature": "RSA/SHA256, \u0427\u0442 22 \u0430\u0432\u0433 2024 19:21:21, Key ID 429785e181b961a5"
+        }, 
+        {
+          "nevra": "leapp-0.18.0-1.el7.noarch", 
+          "signature": "RSA/SHA256, \u0427\u0442 22 \u0430\u0432\u0433 2024 19:21:21, Key ID 429785e181b961a5"
+        }
+      ], 
+      "run_id": "346014ca-6443-4e88-b042-af7f1db7b1bf", 
+      "source_os": "Red Hat Enterprise Linux 7.9", 
+      "success": false, 
+      "target_os": "Red Hat Enterprise Linux 8.10", 
+      "version": "0.18.0"
+    }, 
+    {
+      "activity": "upgrade", 
+      "activity_ended": "2024-10-01T07:05:19.362202Z", 
+      "activity_started": "2024-10-01T07:04:06.380037Z", 
+      "env": {
+        "LEAPP_COMMON_FILES": ":/etc/leapp/repos.d/system_upgrade/common/files:/etc/leapp/repos.d/system_upgrade/el7toel8/files", 
+        "LEAPP_COMMON_TOOLS": ":/etc/leapp/repos.d/system_upgrade/common/tools:/etc/leapp/repos.d/system_upgrade/el7toel8/tools", 
+        "LEAPP_CURRENT_PHASE": "Reports", 
+        "LEAPP_DEBUG": "0", 
+        "LEAPP_EXECUTION_ID": "56bd52e4-4c79-47b6-9d43-1fcebcecb136", 
+        "LEAPP_EXPERIMENTAL": "0", 
+        "LEAPP_HOSTNAME": "fortros-test.ra.local", 
+        "LEAPP_IPU_IN_PROGRESS": "7to8", 
+        "LEAPP_NO_RHSM": "1", 
+        "LEAPP_NO_RHSM_FACTS": "1", 
+        "LEAPP_TARGET_PRODUCT_CHANNEL": "ga", 
+        "LEAPP_UNSUPPORTED": "0", 
+        "LEAPP_UPGRADE_PATH_FLAVOUR": "default", 
+        "LEAPP_UPGRADE_PATH_TARGET_RELEASE": "8.10", 
+        "LEAPP_VERBOSE": "0"
+      }, 
+      "executed": "/bin/leapp upgrade", 
+      "leapp_file_changes": [], 
+      "packages": [
+        {
+          "nevra": "leapp-data-almalinux-0.4-5.el7.20240827.noarch", 
+          "signature": "RSA/SHA256, \u0427\u0442 05 \u0441\u0435\u043d 2024 21:36:40, Key ID 429785e181b961a5"
+        }, 
+        {
+          "nevra": "python2-leapp-0.18.0-1.el7.noarch", 
+          "signature": "RSA/SHA256, \u0427\u0442 22 \u0430\u0432\u0433 2024 19:21:22, Key ID 429785e181b961a5"
+        }, 
+        {
+          "nevra": "leapp-upgrade-el7toel8-deps-1:0.21.0-2.el7.elevate.2.noarch", 
+          "signature": "RSA/SHA256, \u0427\u0442 29 \u0430\u0432\u0433 2024 20:05:41, Key ID 429785e181b961a5"
+        }, 
+        {
+          "nevra": "leapp-upgrade-el7toel8-1:0.21.0-2.el7.elevate.2.noarch", 
+          "signature": "RSA/SHA256, \u0427\u0442 29 \u0430\u0432\u0433 2024 20:05:41, Key ID 429785e181b961a5"
+        }, 
+        {
+          "nevra": "leapp-deps-0.18.0-1.el7.noarch", 
+          "signature": "RSA/SHA256, \u0427\u0442 22 \u0430\u0432\u0433 2024 19:21:21, Key ID 429785e181b961a5"
+        }, 
+        {
+          "nevra": "leapp-0.18.0-1.el7.noarch", 
+          "signature": "RSA/SHA256, \u0427\u0442 22 \u0430\u0432\u0433 2024 19:21:21, Key ID 429785e181b961a5"
+        }
+      ], 
+      "run_id": "56bd52e4-4c79-47b6-9d43-1fcebcecb136", 
+      "source_os": "Red Hat Enterprise Linux 7.9", 
+      "success": false, 
+      "target_os": "Red Hat Enterprise Linux 8.10", 
+      "version": "0.18.0"
+    }, 
+    {
+      "activity": "preupgrade", 
+      "activity_ended": "2024-10-01T07:31:41.776948Z", 
+      "activity_started": "2024-10-01T07:30:22.802642Z", 
+      "env": {
+        "LEAPP_COMMON_FILES": ":/etc/leapp/repos.d/system_upgrade/common/files:/etc/leapp/repos.d/system_upgrade/el7toel8/files", 
+        "LEAPP_COMMON_TOOLS": ":/etc/leapp/repos.d/system_upgrade/common/tools:/etc/leapp/repos.d/system_upgrade/el7toel8/tools", 
+        "LEAPP_CURRENT_PHASE": "Reports", 
+        "LEAPP_DEBUG": "0", 
+        "LEAPP_EXECUTION_ID": "917e5438-a0c7-4346-99d3-a335721616b7", 
+        "LEAPP_EXPERIMENTAL": "0", 
+        "LEAPP_HOSTNAME": "fortros-test.ra.local", 
+        "LEAPP_IPU_IN_PROGRESS": "7to8", 
+        "LEAPP_NO_RHSM": "1", 
+        "LEAPP_NO_RHSM_FACTS": "1", 
+        "LEAPP_TARGET_PRODUCT_CHANNEL": "ga", 
+        "LEAPP_UNSUPPORTED": "0", 
+        "LEAPP_UPGRADE_PATH_FLAVOUR": "default", 
+        "LEAPP_UPGRADE_PATH_TARGET_RELEASE": "8.10", 
+        "LEAPP_VERBOSE": "0"
+      }, 
+      "executed": "/bin/leapp preupgrade", 
+      "leapp_file_changes": [], 
+      "packages": [
+        {
+          "nevra": "leapp-data-almalinux-0.4-5.el7.20240827.noarch", 
+          "signature": "RSA/SHA256, \u0427\u0442 05 \u0441\u0435\u043d 2024 21:36:40, Key ID 429785e181b961a5"
+        }, 
+        {
+          "nevra": "python2-leapp-0.18.0-1.el7.noarch", 
+          "signature": "RSA/SHA256, \u0427\u0442 22 \u0430\u0432\u0433 2024 19:21:22, Key ID 429785e181b961a5"
+        }, 
+        {
+          "nevra": "leapp-upgrade-el7toel8-deps-1:0.21.0-2.el7.elevate.2.noarch", 
+          "signature": "RSA/SHA256, \u0427\u0442 29 \u0430\u0432\u0433 2024 20:05:41, Key ID 429785e181b961a5"
+        }, 
+        {
+          "nevra": "leapp-upgrade-el7toel8-1:0.21.0-2.el7.elevate.2.noarch", 
+          "signature": "RSA/SHA256, \u0427\u0442 29 \u0430\u0432\u0433 2024 20:05:41, Key ID 429785e181b961a5"
+        }, 
+        {
+          "nevra": "leapp-deps-0.18.0-1.el7.noarch", 
+          "signature": "RSA/SHA256, \u0427\u0442 22 \u0430\u0432\u0433 2024 19:21:21, Key ID 429785e181b961a5"
+        }, 
+        {
+          "nevra": "leapp-0.18.0-1.el7.noarch", 
+          "signature": "RSA/SHA256, \u0427\u0442 22 \u0430\u0432\u0433 2024 19:21:21, Key ID 429785e181b961a5"
+        }
+      ], 
+      "run_id": "917e5438-a0c7-4346-99d3-a335721616b7", 
+      "source_os": "Red Hat Enterprise Linux 7.9", 
+      "success": false, 
+      "target_os": "Red Hat Enterprise Linux 8.10", 
+      "version": "0.18.0"
+    }
+  ]
+}
